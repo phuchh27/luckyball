@@ -1,0 +1,40 @@
+<audio id="spin-sound" src="../../../assets/mixkit-bike-wheel-spinning-1613.wav"></audio>
+<audio id="tada-sound" src="../../../assets/tada-military-3-183975.mp3"></audio>
+<div class="results">
+    <div class="cards">
+        <div *ngFor="let item of rounds" class="card">
+            <h3>{{item.luckyPeople ||
+                '?'}}</h3>
+            <div class="round-number">{{item.id}}</div>
+        </div>
+
+    </div>
+    <div class="action">
+        <button class="btn refresh" (click)="onRevert()">Revert</button>
+        <button class="btn" (click)="onRoll()">Roll</button>
+        <button class="btn refresh" (click)="onRefresh()">Refresh</button>
+    </div>
+
+    <div class="result-alert" *ngIf="spintMode">
+        <div class="roll">Roll</div>
+        <div class="wheel">
+            <div class="number" style="--i:1;--clr:#db7093"><span>?</span></div>
+            <div class="number" style="--i:2;--clr:#87ceeb"><span>?</span></div>
+            <div class="number" style="--i:3;--clr:#32cd32"><span>?</span></div>
+            <div class="number" style="--i:4;--clr:#ff6347"><span>?</span></div>
+            <div class="number" style="--i:5;--clr:#ff69b4"><span>?</span></div>
+            <div class="number" style="--i:6;--clr:#8a2be2"><span>?</span></div>
+            <div class="number" style="--i:7;--clr:#5f9ea0"><span>?</span></div>
+            <div class="number" style="--i:8;--clr:#d2691e"><span>?</span></div>
+            <div class="number" style="--i:9;--clr:#9acd32"><span>?</span></div>
+            <div class="number"
+                style="--i:10;--clr:#6495ed"><span>?</span></div>
+        </div>
+        <div class="spin-done" *ngIf="resultMode">
+            <h1 class="lucky-num">{{luckyNum}}</h1>
+            <button class="btn-coutinue" (click)="onClose()">Coutinue</button>
+            <div class="paper-fireworks"></div>
+        </div>
+
+    </div>
+</div>

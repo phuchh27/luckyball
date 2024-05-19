@@ -1,0 +1,9 @@
+
+<div class="app">
+  <app-header />
+  <app-round-results />
+  <mat-icon (click)="enableSetting()" class="setting">settings</mat-icon>
+  <app-setting *ngIf="seetingMode"
+    (settingSuccess)="handleSettingSuccess($event)"
+    class="app-setting"></app-setting>
+</div>

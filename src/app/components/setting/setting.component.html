@@ -1,0 +1,17 @@
+<div class="setting-component">
+    <form class="form"
+        [formGroup]="settingForm"
+        (ngSubmit)="done()">
+        <mat-form-field>
+            <mat-label>Number of Participants</mat-label>
+            <input type="number" matInput placeholder="1-.."
+                formControlName="numberParticipants">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Number round</mat-label>
+            <input type="number" matInput placeholder="1-.."
+                formControlName="numberRound">
+        </mat-form-field>
+        <button type="submit" class="btn">Save</button>
+    </form>
+</div>

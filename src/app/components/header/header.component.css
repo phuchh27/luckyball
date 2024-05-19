@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: 8vh;
+    background-color: #B39BC8;
+    box-shadow: 0 0 10px 0 rgb(62, 61, 61);
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    line-height: 8vh;
+}

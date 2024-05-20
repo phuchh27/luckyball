@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './round-results.component.html',
-  styleUrl: './round-results.component.css',
+  styleUrls: ['./round-results.component.css', './round-results2.component.css'],
 })
 export class RoundResultsComponent implements OnInit {
   rounds: SettingInterface[] = [];

@@ -1,0 +1,162 @@
+.result-alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    height: 92vh;
+    background-color: pink;
+    overflow: hidden;
+}
+
+.wheel {
+    position: absolute;
+    top: 23%;
+    left: calc(50% - 220px);
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #333, 0 0 0 15px #fff, 0 0 0 18px #111;
+    overflow: hidden;
+    animation: spin 2s linear infinite;
+    transition: all 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+}
+
+.wheel.shrink {
+    scale: 0.3;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(36deg * var(--i)));
+    clip-path: polygon(0 0, 55% 0, 100% 100%, 0 55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roll {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid pink;
+    line-height: 50px;
+    text-align: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    color: #E64398;
+    font-weight: bold;
+}
+
+.roll::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border: 3px solid pink;
+    border-bottom: 0;
+}
+
+span {
+    position: relative;
+    transform: rotate(320deg);
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+.spin-done {
+    position: relative;
+    width: 60vw;
+    height: 70vh;
+    top: 10%;
+    left: 20%;
+    z-index: 1000;
+    background-color: white;
+    animation: scale-up 0.5s ease-in-out;
+}
+
+.lucky-num {
+    line-height: 70vh;
+    text-align: center;
+    font-size: 200px;
+    width: 60vw;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    font-weight: bold;
+    color: #B39BC8;
+
+}
+
+.btn-coutinue {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 100px);
+    width: 200px;
+    padding: 15px 30px;
+    background-color: #F172A1;
+    border-radius: 8px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.btn-coutinue:active,
+.btn-coutinue:focus {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px,
+        rgba(0, 0, 0, 0.2) 0px 5px 10px -3px,
+        rgba(0, 0, 0, 0.1) 0px -1px 0px inset;
+    transform: translateY(2px);
+}
+
+.paper-fireworks {
+    position: absolute;
+    top: -200px;
+    bottom: -200px;
+    left: -200px;
+    right: -220px;
+    background-image: url(https://png.pngtree.com/png-clipart/20220313/original/pngtree-realistic-colorful-confetti-png-image_7431383.png);
+    max-width: 130%;
+    overflow: hidden;
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

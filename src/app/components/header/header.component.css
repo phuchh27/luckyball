@@ -17,14 +17,10 @@
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 42px;
     color: white;
     line-height: 8vh;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: "Lovers Quarrel", cursive;
-    font-weight: 500;
-    font-style: normal;
-}
+    align-items: center;}

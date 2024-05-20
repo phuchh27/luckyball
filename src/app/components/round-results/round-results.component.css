@@ -15,14 +15,13 @@
 }
 
 .card {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     position: relative;
     width: 200px;
     height: 75px;
     border-radius: 12px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     color: #E64398;
-
 }
 
 .round-number {
@@ -39,33 +38,31 @@
     left: -5px;
 }
 
-.round-number::before {
+.round-number::before,
+.round-number::after {
     position: absolute;
     content: '';
     background-color: #F172A1;
+    border: 3px solid #B39BC8;
+}
+
+.round-number::before {
     height: 60%;
     width: 90%;
     top: -14px;
     left: -3px;
     border-radius: 75px 75px 0 0;
-    border: 3px solid #B39BC8;
     border-bottom: none;
-    transform: rotate(0deg);
 }
 
 .round-number::after {
-    position: absolute;
-    content: '';
-    background-color: #F172A1;
     height: 60%;
     width: 100%;
     transform: rotate(-90deg);
     top: 13%;
     right: -95%;
     border-radius: 0 0 75px 75px;
-    border: 3px solid #B39BC8;
     border-top: none;
-
 }
 
 .round-number-item {
@@ -108,7 +105,6 @@ h3 {
     position: relative;
     border-top: none;
     border-right: none;
-
 }
 
 .action-text {
@@ -122,36 +118,30 @@ h3 {
     left: 0px;
 }
 
-.btn::before {
-    position: absolute;
-    content: '';
-    background-color: #F172A1;
-    height: 55%;
-    width: 100%;
-    top: -28px;
-    left: -3px;
-    border: 3px solid #B39BC8;
-    border-radius: 75px 75px 0 0;
-    border-bottom: none;
-
-
-
-}
-
+.btn::before,
 .btn::after {
     position: absolute;
     content: '';
     background-color: #F172A1;
+    border: 3px solid #B39BC8;
+    border-bottom: none;
+}
+
+.btn::before {
+    height: 55%;
+    width: 100%;
+    top: -28px;
+    left: -3px;
+    border-radius: 75px 75px 0 0;
+}
+
+.btn::after {
     height: 55%;
     width: 100%;
     top: 9px;
     right: -40px;
-    border: 3px solid #B39BC8;
     border-radius: 75px 75px 0 0;
-    border-bottom: none;
     transform: rotate(90deg);
-
-
 }
 
 .btn:hover,
@@ -166,23 +156,18 @@ h3 {
 
 .btn-active:active,
 .btn-active:focus {
-
     transform: translateY(2px);
 }
 
 .refresh {
     background-color: #F0EBF4;
-
 }
 
 .refresh.action-text {
     color: #A1C3D1 !important;
 }
 
-.refresh::before {
-    background-color: #F0EBF4;
-}
-
+.refresh::before,
 .refresh::after {
     background-color: #F0EBF4;
 }
@@ -193,8 +178,6 @@ h3 {
     background-color: #A1C3D1;
     color: white;
 }
-
-
 
 .result-alert {
     position: absolute;
@@ -295,7 +278,7 @@ span {
     left: 20%;
     z-index: 1000;
     background-color: white;
-    animation: scale-up .5s ease-in-out;
+    animation: scale-up 0.5s ease-in-out;
 }
 
 .lucky-num {

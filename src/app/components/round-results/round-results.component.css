@@ -22,22 +22,61 @@
     border-radius: 12px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     color: #E64398;
-    
+
 }
 
 .round-number {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #F172A1;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    border: 3px solid #B39BC8;
+    transform: rotate(-45deg);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    top: -10px;
-    left: -10px;
-    color: white;
+    border: 3px solid #B39BC8;
+    border-top: none;
+    border-right: none;
+    top: 0px;
+    left: -5px;
+}
+
+.round-number::before {
+    position: absolute;
+    content: '';
+    background-color: #F172A1;
+    height: 60%;
+    width: 90%;
+    top: -14px;
+    left: -3px;
+    border-radius: 75px 75px 0 0;
+    border: 3px solid #B39BC8;
+    border-bottom: none;
+    transform: rotate(0deg);
+}
+
+.round-number::after {
+    position: absolute;
+    content: '';
+    background-color: #F172A1;
+    height: 60%;
+    width: 100%;
+    transform: rotate(-90deg);
+    top: 13%;
+    right: -95%;
+    border-radius: 0 0 75px 75px;
+    border: 3px solid #B39BC8;
+    border-top: none;
+
+}
+
+.round-number-item {
+    position: absolute;
+    transform: rotate(45deg);
+    font-size: 16px;
+    top: -2px;
+    left: -8px;
+    z-index: 1;
+    width: 40px;
+    text-align: center;
 }
 
 h3 {
@@ -56,9 +95,8 @@ h3 {
 }
 
 .btn {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+    height: 50px;
+    width: 50px;
     border: none;
     background-color: #F172A1;
     font-size: 16px;
@@ -66,31 +104,92 @@ h3 {
     color: white;
     border: 3px solid #B39BC8;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transform: rotate(-45deg);
+    position: relative;
+    border-top: none;
+    border-right: none;
 
 }
 
-.btn:hover{
-background-color: #E64398;
+.action-text {
+    font-size: 16px;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 1;
+    width: 70px;
+    text-align: center;
+    top: 4px;
+    left: 0px;
 }
 
-.btn:active,
-.btn:focus {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px,
-        rgba(0, 0, 0, 0.2) 0px 5px 10px -3px,
-        rgba(0, 0, 0, 0.1) 0px -1px 0px inset;
+.btn::before {
+    position: absolute;
+    content: '';
+    background-color: #F172A1;
+    height: 55%;
+    width: 100%;
+    top: -28px;
+    left: -3px;
+    border: 3px solid #B39BC8;
+    border-radius: 75px 75px 0 0;
+    border-bottom: none;
+
+
+
+}
+
+.btn::after {
+    position: absolute;
+    content: '';
+    background-color: #F172A1;
+    height: 55%;
+    width: 100%;
+    top: 9px;
+    right: -40px;
+    border: 3px solid #B39BC8;
+    border-radius: 75px 75px 0 0;
+    border-bottom: none;
+    transform: rotate(90deg);
+
+
+}
+
+.btn:hover,
+.btn:hover::after,
+.btn:hover::before {
+    background-color: #E64398;
+}
+
+.btn-active {
+    transition: all 0.2s ease, transform 0.2s ease;
+}
+
+.btn-active:active,
+.btn-active:focus {
+
     transform: translateY(2px);
 }
 
 .refresh {
     background-color: #F0EBF4;
-    color: #F172A1;
+
 }
 
-.refresh:hover{
+.refresh.action-text {
+    color: #A1C3D1 !important;
+}
+
+.refresh::before {
+    background-color: #F0EBF4;
+}
+
+.refresh::after {
+    background-color: #F0EBF4;
+}
+
+.refresh:hover,
+.refresh:hover::after,
+.refresh:hover::before {
     background-color: #A1C3D1;
     color: white;
 }
